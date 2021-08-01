@@ -88,7 +88,7 @@ async function createData(res,name, nickname, facility, empNum, phoneNo, consent
       consent:consent
     },
   };
-
+  
   try {
     await dynamoDbClient.put(params).promise();
     res.json({ id, name, nickname, facility, empNum, phoneNo, consent });
